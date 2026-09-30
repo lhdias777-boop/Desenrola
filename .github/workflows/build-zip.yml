@@ -1,0 +1,14 @@
+name: Build Desenrola ZIP
+on:
+  push:
+    branches: [main]
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: zip -r desenrola-atualizado.zip . -x ".git/*" ".github/*"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: desenrola-atualizado
+          path: desenrola-atualizado.zip
