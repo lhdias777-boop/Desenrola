@@ -116,7 +116,7 @@ app.post('/api/desenrola', async (req, res) => {
   }
 });
 
-app.get('*', (_req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'desenrola-site', 'index.html'));
 });
 
