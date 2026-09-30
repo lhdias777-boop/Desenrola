@@ -1,0 +1,15 @@
+{
+  "name": "desenrola-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20 <25"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
